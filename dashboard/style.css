@@ -1,0 +1,158 @@
+/* Import Plus Jakarta Sans / Inter */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Background - Deep Slate */
+.stApp {
+    background: #0f172a !important;
+}
+
+/* Hide Sidebar completely for this layout */
+[data-testid="stSidebar"] {
+    display: none !important;
+}
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+
+/* Top Navbar Styling (Hacking Streamlit Radio Buttons) */
+/* We wrap the radio in a container named .st-nav */
+div[role="radiogroup"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    gap: 20px !important;
+    background: transparent !important;
+    border: none !important;
+    padding-top: 10px;
+}
+
+div[role="radiogroup"] label {
+    background: transparent !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    color: #94a3b8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+}
+
+div[role="radiogroup"] label:hover {
+    color: #f8fafc !important;
+}
+
+div[role="radiogroup"] label[data-checked="true"] {
+    color: #10b981 !important;
+    border-bottom: 2px solid #10b981 !important;
+    border-radius: 0px !important;
+    background: transparent !important;
+}
+div[role="radiogroup"] label[data-checked="true"] div[data-testid="stMarkdownContainer"] p {
+    color: #10b981 !important;
+}
+
+/* Custom "BQPhy" style tab for Quantum */
+div[role="radiogroup"] label:last-child {
+    background: rgba(139, 92, 246, 0.1) !important;
+    border: 1px solid rgba(139, 92, 246, 0.5) !important;
+    border-radius: 6px !important;
+    color: #c4b5fd !important;
+}
+div[role="radiogroup"] label:last-child[data-checked="true"] {
+    background: rgba(139, 92, 246, 0.2) !important;
+    border: 1px solid #8b5cf6 !important;
+    color: #ddd6fe !important;
+}
+
+/* Logo / Header placement */
+header[data-testid="stHeader"] {
+    background: #0f172a !important;
+    border-bottom: 1px solid #1e293b !important;
+    height: 60px !important;
+}
+
+/* Landing Page Buttons */
+.landing-btn-primary > button {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: all 0.2s;
+    width: 100%;
+}
+.landing-btn-primary > button:hover {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4) !important;
+}
+
+.landing-btn-secondary > button {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: all 0.2s;
+    width: 100%;
+}
+.landing-btn-secondary > button:hover {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4) !important;
+}
+
+/* Cards & Containers */
+[data-testid="stVerticalBlock"] > div[style*="border"] {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+}
+
+/* Header Text (Like Photo 4) */
+h1 {
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    text-align: center !important;
+}
+.subtitle {
+    color: #94a3b8;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 auto 20px auto;
+}
+
+/* Progress bar styles for tables (Photo 1) */
+.stProgress > div > div > div {
+    background-color: #10b981 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
